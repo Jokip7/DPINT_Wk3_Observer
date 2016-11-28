@@ -83,6 +83,8 @@
     </Compile>
     <Compile Include="Model\BaggageHandler.cs" />
     <Compile Include="Model\BaggageDestination.cs" />
+    <Compile Include="Model\Observable.cs" />
+    <Compile Include="Model\Unsubscriber.cs" />
     <Compile Include="ViewModel\ArrivalsViewModel.cs" />
     <Compile Include="ViewModel\BaggageDestinationViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />

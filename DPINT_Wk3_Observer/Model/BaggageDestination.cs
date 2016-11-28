@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DPINT_Wk3_Observer.Model
 {
-    public class BaggageDestination
+    public class BaggageDestination : Observable<BaggageDestination>
     {
         private int _flightNumber;
         public int FlightNumber

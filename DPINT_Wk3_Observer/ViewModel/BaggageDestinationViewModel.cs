@@ -9,8 +9,15 @@ using System.Threading.Tasks;
 
 namespace DPINT_Wk3_Observer.ViewModel
 {
-    public class BaggageDestinationViewModel : ViewModelBase
+    public class BaggageDestinationViewModel : ViewModelBase, IObserver<T>
     {
+        public BaggageDestinationViewModel(BaggageDestination destination)
+        {
+            Belt = destination.Belt;
+            From = destination.From;
+            FlightNumber = destination.FlightNumber;
+        }
+
         private int _flightNumber;
         public int FlightNumber
         {
@@ -31,12 +38,20 @@ namespace DPINT_Wk3_Observer.ViewModel
             get { return _belt; }
             set { _belt = value; RaisePropertyChanged("Belt"); }
         }
-        
-        public BaggageDestinationViewModel(BaggageDestination destination)
+
+        public void OnNext(T value)
         {
-            Belt = destination.Belt;
-            From = destination.From;
-            FlightNumber = destination.FlightNumber;
+            throw new NotImplementedException();
+        }
+
+        public void OnError(Exception error)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnCompleted()
+        {
+            throw new NotImplementedException();
         }
     }
 }
